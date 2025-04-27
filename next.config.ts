@@ -18,8 +18,23 @@
 // export default nextConfig;
 
 /** */
+// const nextConfig = {
+//   output: "standalone",
+//   images: {
+//     remotePatterns: [
+//       {
+//         protocol: "https",
+//         hostname: "www.themealdb.com",
+//         pathname: "/images/**",
+//       },
+//     ],
+//   },
+// };
+
+// export default nextConfig;
+
 const nextConfig = {
-  output: "standalone",
+  // Elimina "standalone" a menos que necesites Docker
   images: {
     remotePatterns: [
       {
@@ -29,6 +44,8 @@ const nextConfig = {
       },
     ],
   },
+  // Añade si necesitas SSR
+  experimental: {
+    serverComponentsExternalPackages: ["axios"],
+  },
 };
-
-export default nextConfig;
