@@ -33,9 +33,11 @@
 
 // export default nextConfig;
 
-/** @type {import('next').NextConfig} */
+/** */
 const nextConfig = {
+  output: "export", // Para generación estática
   images: {
+    unoptimized: true, // Necesario con 'output: export'
     remotePatterns: [
       {
         protocol: "https",
@@ -44,15 +46,7 @@ const nextConfig = {
       },
     ],
   },
-  // Opcional: Rewrites para evitar 404 en rutas dinámicas
-  async rewrites() {
-    return [
-      {
-        source: "/:path*",
-        destination: "/",
-      },
-    ];
-  },
+  // Elimina cualquier configuración de 'standalone' o 'serverComponentsExternalPackages'
 };
 
 module.exports = nextConfig;
