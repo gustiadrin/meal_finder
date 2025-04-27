@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Montserrat, Roboto } from "next/font/google";
 import "./globals.css";
-export const dynamic = "force-static";
 
 const geistMontserrat = Montserrat({
   variable: "--font-montserrat",
@@ -32,6 +31,8 @@ export const metadata: Metadata = {
     `,
   },
 };
+
+export const dynamic = "force-static";
 
 export default function RootLayout({
   children,
