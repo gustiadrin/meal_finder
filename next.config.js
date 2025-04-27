@@ -45,13 +45,7 @@ const nextConfig = {
       },
     ],
   },
-  // Añade rewrites para evitar 404
-  async rewrites() {
-    return [
-      {
-        source: "/:category(Beef|Dessert|Pasta|etc)", // Todas tus categorías
-        destination: "/", // Redirige a la raíz
-      },
-    ];
-  },
+  // ¡No uses output: 'export' ni output: 'standalone'!
 };
+
+module.exports = nextConfig;
