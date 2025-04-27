@@ -17,9 +17,9 @@
 
 // export default nextConfig;
 
-/** @type {import('next').NextConfig} */
+/** */
 const nextConfig = {
-  output: "standalone", // Crucial para Vercel
+  output: "standalone",
   images: {
     remotePatterns: [
       {
