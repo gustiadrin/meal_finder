@@ -2,7 +2,7 @@
 import { useState, useEffect, useRef } from "react";
 import useApidata from "@/hooks/useApiData";
 import { Category } from "@/types";
-import { Skeleton } from "@/components/ui/skeleton";
+import { Skeleton } from "@/app/components/ui/skeleton";
 
 interface SideNavProps {
   setCategory: (category: string) => void;

@@ -1,6 +1,6 @@
 "use client";
 
-import { Skeleton } from "@/components/ui/skeleton";
+import { Skeleton } from "@/app/components/ui/skeleton";
 import useApiData from "@/hooks/useApiData";
 import { Meals } from "@/types";
 import MealCard from "./MealCard";
