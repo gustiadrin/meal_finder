@@ -1,21 +1,6 @@
-// import React from "react";
-
-// type Props = {};
-
-// const Header = (props: Props) => {
-//   return (
-//     <header className="w-full h-16 shrink-0 sticky top-0 z-40 bg-blue-50 shadow-lg"></header>
-//   );
-// };
-
-// export default Header;
-
-import React from "react";
 import { Search } from "lucide-react"; // Importa el ícono de búsqueda
 
-type Props = {};
-
-const Header = (props: Props) => {
+const Header = () => {
   return (
     <header className="w-full h-16 shrink-0 sticky top-0 z-40 bg-blue-50 shadow-lg flex items-center justify-between px-4">
       {/* Logo o título (30% del espacio) */}

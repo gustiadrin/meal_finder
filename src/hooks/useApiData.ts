@@ -1,32 +1,3 @@
-// "use client";
-
-// import axios from "axios";
-// import { useEffect, useState } from "react";
-
-// export default function useApidata<T>(url: string) {
-//   const [data, setData] = useState<T[]>([]);
-//   const [loading, setLoading] = useState(false);
-
-//   useEffect(() => {
-//     setLoading(true);
-//     const controller = new AbortController();
-//     const { signal } = controller;
-
-//     axios
-//       .get<{ meals: T[] }>(url, { signal })
-//       .then(({ data }) => {
-//         setData(data.meals);
-//       })
-//       .finally(() => {
-//         setLoading(false);
-//       });
-
-//     return () => controller.abort();
-//   }, []);
-
-//   return { data, loading }; // <-- Aquí está el return que expone los estados
-// }
-
 "use client";
 
 import axios from "axios";

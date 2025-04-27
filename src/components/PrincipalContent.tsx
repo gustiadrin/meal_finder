@@ -1,46 +1,18 @@
 "use client";
 
 import { Skeleton } from "@/components/ui/skeleton";
+import useApiData from "@/hooks/useApiData";
+import { Meals } from "@/types";
+import MealCard from "./MealCard";
 
 interface PrincipalContentProps {
   meal: string;
 }
 
-import useApiData from "@/hooks/useApiData";
-import { Meals } from "@/types";
-import MealCard from "./MealCard";
-
 export default function PrincipalContent({ meal }: PrincipalContentProps) {
   const { data, loading } = useApiData<Meals>(
     `https://www.themealdb.com/api/json/v1/1/filter.php?c=${meal}`
   );
-  console.log(data);
-  console.log(data[1]?.strMealThumb);
-  // if (data && data.length > 1) {
-  //   console.log(data[1].strMeal.strMealThumb);
-  // }
-
-  // if (loading || !data?.length) {
-  //   return (
-  //     <div className="flex-1 bg-blue-50">
-  //       <div className="h-auto gap-4 m-[3%] flex flex-col items-center sm:flex-row sm:flex-wrap sm:justify-center"></div>
-  //       <div className="bg-white max-w-3xs h-[350px] overflow-hidden flex flex-col justify-between relative p-4 rounded-sm shadow-lg ">
-  //         <Skeleton className="w-[224px] h-[250px] rounded-sm"></Skeleton>
-  //         <Skeleton className="w-40 h-3"></Skeleton>
-  //         <Skeleton className="w-28 h-9"></Skeleton>
-  //       </div>
-  //       <div className="bg-white max-w-3xs h-[350px] overflow-hidden flex flex-col justify-between relative p-4 rounded-sm shadow-lg ">
-  //         <Skeleton className="w-[224px] h-[250px] rounded-sm"></Skeleton>
-  //         <Skeleton className="w-40 h-3"></Skeleton>
-  //         <Skeleton className="w-28 h-9"></Skeleton>
-  //       </div>
-  //       <div className="bg-white max-w-3xs h-[350px] overflow-hidden flex flex-col justify-between relative p-4 rounded-sm shadow-lg ">
-  //         <Skeleton className="w-[224px] h-[250px] rounded-sm"></Skeleton>
-  //         <Skeleton className="w-40 h-3"></Skeleton>
-  //         <Skeleton className="w-28 h-9"></Skeleton>
-  //       </div>
-  //     </div>
-  //   );
   if (loading || !data?.length) {
     return (
       <div className="flex-1 bg-blue-50">

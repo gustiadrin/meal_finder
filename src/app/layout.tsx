@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Montserrat, Roboto } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header";
-import SideNav from "@/components/SideNav";
-import PrincipalContent from "@/components/PrincipalContent";
 import Main from "@/components/Main";
 
 const geistMontserrat = Montserrat({
