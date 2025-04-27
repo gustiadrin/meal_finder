@@ -4,11 +4,7 @@ import SideNav from "./SideNav";
 import PrincipalContent from "./PrincipalContent";
 import Header from "./Header";
 
-type Props = {
-  children: ReactNode;
-};
-
-const Main = (props: Props) => {
+const Main = () => {
   const [category, setCategory] = useState("Beef");
   return (
     <>
