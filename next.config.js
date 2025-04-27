@@ -34,10 +34,9 @@
 // export default nextConfig;
 
 /** */
+
 const nextConfig = {
-  output: "export", // Para generación estática
   images: {
-    unoptimized: true, // Necesario con 'output: export'
     remotePatterns: [
       {
         protocol: "https",
@@ -46,7 +45,13 @@ const nextConfig = {
       },
     ],
   },
-  // Elimina cualquier configuración de 'standalone' o 'serverComponentsExternalPackages'
+  // Añade rewrites para evitar 404
+  async rewrites() {
+    return [
+      {
+        source: "/:category(Beef|Dessert|Pasta|etc)", // Todas tus categorías
+        destination: "/", // Redirige a la raíz
+      },
+    ];
+  },
 };
-
-module.exports = nextConfig;
