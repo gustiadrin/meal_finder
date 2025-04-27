@@ -33,8 +33,8 @@
 
 // export default nextConfig;
 
+/** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Elimina "standalone" a menos que necesites Docker
   images: {
     remotePatterns: [
       {
@@ -44,4 +44,15 @@ const nextConfig = {
       },
     ],
   },
+  // Opcional: Rewrites para evitar 404 en rutas dinámicas
+  async rewrites() {
+    return [
+      {
+        source: "/:path*",
+        destination: "/",
+      },
+    ];
+  },
 };
+
+module.exports = nextConfig;
