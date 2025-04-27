@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Montserrat, Roboto } from "next/font/google";
 import "./globals.css";
-import Main from "@/app/Page";
 
 const geistMontserrat = Montserrat({
   variable: "--font-montserrat",
@@ -33,7 +32,9 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({}: Readonly<{
+export default function RootLayout({
+  children,
+}: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
@@ -41,7 +42,7 @@ export default function RootLayout({}: Readonly<{
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${geistRoboto.variable} ${geistMontserrat.variable}  antialiased`}
       >
-        <Main></Main>
+        {children}
       </body>
     </html>
   );
