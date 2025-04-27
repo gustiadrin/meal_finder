@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
-import SideNav from "./SideNav";
-import PrincipalContent from "./PrincipalContent";
-import Header from "./Header";
+import SideNav from "../components/SideNav";
+import PrincipalContent from "../components/PrincipalContent";
+import Header from "../components/Header";
 
 const Main = () => {
   const [category, setCategory] = useState("Beef");

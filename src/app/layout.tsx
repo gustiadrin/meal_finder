@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Montserrat, Roboto } from "next/font/google";
 import "./globals.css";
-import Main from "@/components/Main";
+import Main from "@/app/Page";
 
 const geistMontserrat = Montserrat({
   variable: "--font-montserrat",
