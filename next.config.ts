@@ -44,8 +44,4 @@ const nextConfig = {
       },
     ],
   },
-  // Añade si necesitas SSR
-  experimental: {
-    serverComponentsExternalPackages: ["axios"],
-  },
 };
