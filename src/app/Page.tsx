@@ -4,7 +4,7 @@ import SideNav from "./components/SideNav";
 import PrincipalContent from "./components/PrincipalContent";
 import Header from "./components/Header";
 
-const Main = () => {
+export default function Home() {
   const [category, setCategory] = useState("Beef");
   return (
     <>
@@ -15,6 +15,4 @@ const Main = () => {
       </main>
     </>
   );
-};
-
-export default Main;
+}
