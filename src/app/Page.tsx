@@ -7,14 +7,17 @@ import { useRouter } from "next/navigation";
 
 export default function Home() {
   const router = useRouter();
+  const [category, setCategory] = useState("Beef");
 
   useEffect(() => {
-    // Redirige todas las rutas no existentes a /
-    if (window.location.pathname !== "/") {
+    // Fuerza redirección a la raíz en producción
+    if (typeof window !== "undefined" && window.location.pathname !== "/") {
       router.replace("/");
+      // Limpia la URL sin recargar
+      window.history.replaceState(null, "", "/");
     }
-  }, []);
-  const [category, setCategory] = useState("Beef");
+  }, [router]);
+
   return (
     <>
       <Header></Header>
