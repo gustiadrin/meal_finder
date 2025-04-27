@@ -104,7 +104,7 @@ export default function SideNav({ setCategory }: SideNavProps) {
       {SKELETON_WIDTHS.map((width, i) => (
         <Skeleton
           key={`skeleton-${i}`}
-          className={`h-[10px] rounded-full bg-blue-300 ${width}`}
+          className={`h-[10px] rounded-full bg-blue-100 ${width}`}
         />
       ))}
     </div>
